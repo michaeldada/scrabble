@@ -5,9 +5,10 @@ namespace Scrabble.Objects
   public class ScrabbleTest
   {
     [Fact]
-    public void //()
+    public void ScrabbleScore_ValueOfSingleLetterZ_10()
     {
-     
+      ScrabbleWord newScrabbleWord = new ScrabbleWord("z");
+      Assert.Equal(newScrabbleWord.ScrabbleScore(), 10);
     }
     
   }

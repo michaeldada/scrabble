@@ -13,7 +13,7 @@ namespace Scrabble
         return View["index.cshtml"];
       };
       Post["/output"] = _ => {
-        
+        string output = "output";
         return View["output.cshtml", output];
       };
     }
