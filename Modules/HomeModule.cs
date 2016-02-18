@@ -13,7 +13,9 @@ namespace Scrabble
         return View["index.cshtml"];
       };
       Post["/output"] = _ => {
-        string output = "output";
+        ScrabbleWord newScrabbleWord = new ScrabbleWord(Request.Form["word"]);
+
+        int output =   newScrabbleWord.ScrabbleScore();
         return View["output.cshtml", output];
       };
     }
